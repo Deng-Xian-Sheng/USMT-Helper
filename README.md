@@ -29,4 +29,3 @@ It supports both Chinese and English.
    Based on the search results, generate USMT custom XML files named after the applications for migration.  
 10. 引导用户下一步操作。  
     Guide the user through the next steps.  
-```
