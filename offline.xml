@@ -1,0 +1,10 @@
+<offline>
+    <winDir>
+        <path>C:\Windows</path>
+    </winDir>
+    <failOnMultipleWinDir>1</failOnMultipleWinDir>
+    <mappings>
+        <path>C:\,D:\</path>
+        <path>D:\,E:\</path>
+    </mappings>
+</offline>
