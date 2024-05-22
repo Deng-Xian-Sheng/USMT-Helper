@@ -1,3 +1,5 @@
+<!-- 环境变量有助于编写
+https://learn.microsoft.com/zh-cn/windows/deployment/usmt/usmt-recognized-environment-variables -->
 <migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/migtestapp">
     <component type="Application">
         <!-- 应用程序的名称 -->

@@ -1,4 +1,14 @@
-# https://superuser.com/questions/1327037/what-choices-do-i-have-about-where-to-install-software-on-windows-10
-# https://stackoverflow.com/questions/55025867/choose-right-windows-directory-to-install-software-and-allow-auto-updates
-# https://www.google.com/search?q=Windows+soft+install+path&sca_esv=8ee0a4bf7d87b514&sca_upv=1&sxsrf=ADLYWIJ5zavtrAYHlmeZv_l2GVXN5FEbsw%3A1716281943047&ei=V2JMZsy-AsT-p84P1dmqyAI&ved=0ahUKEwiMxrK8sJ6GAxVE_8kDHdWsCikQ4dUDCBA&uact=5&oq=Windows+soft+install+path&gs_lp=Egxnd3Mtd2l6LXNlcnAiGVdpbmRvd3Mgc29mdCBpbnN0YWxsIHBhdGgyBRAhGKABSIxUUIEQWPNQcAR4AZABAZgBxAWgAaZPqgEKMy0xMy4xLjcuMbgBA8gBAPgBAZgCC6ACgBXCAgoQABiwAxjWBBhHwgIIECEYoAEYwwTCAgYQABgIGB7CAggQABiABBiiBJgDAIgGAZAGB5IHCTQuMy02LjAuMaAH5zQ&sclient=gws-wiz-serp
-# https://docs.python.org/zh-cn/3/library/winreg.html#
+import winreg
+
+# 用户特定的设置应写入 HKCU\Software
+# 特定于计算机的设置应写入 HKLM\Software
+
+# path里或许也有应用程序
+# HKEY_USERS
+# HKEY_CURRENT_USER\Software
+# HKEY_LOCAL_MACHINE\SOFTWARE\\Microsoft\Windows\CurrentVersion\Uninstall
+# HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+# [software vendor name]\[application name]HKLM\Software\Microsoft\Internet Explorer
+# HKEY_CURRENT_USER\Software\Microsoft\Installer\Products 
+# HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted
+winreg.LoadKey()
