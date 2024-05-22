@@ -1,0 +1,18 @@
+PS C:\Users\likewendy\Desktop\USMT-Helper> python.exe '.\USMT Helper.py'
+Registry key not found: SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+Registry key not found: SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+ID: 7-Zip, Name: 7-Zip 23.01 (x64), Version: 23.01
+ID: 78218057-efe0-5bff-b21f-f64841189568, Name: AppGallery, Version: 2.2.10.300
+ID: AddressBook, Name: N/A, Version: N/A
+ID: Connection Manager, Name: N/A, Version: N/A
+ID: CPUID CPU-Z_is1, Name: CPUID CPU-Z 2.06, Version: 2.06
+ID: DirectDrawEx, Name: N/A, Version: N/A
+ID: Docker Desktop, Name: Docker Desktop, Version: 4.25.0
+ID: DXM_Runtime, Name: N/A, Version: N/A
+ID: Fontcore, Name: N/A, Version: N/A
+ID: Git_is1, Name: Git, Version: 2.41.0
+ID: HiviewService, Name: N/A, Version: 13.0.6.92
+ID: HMS Core, Name: HMS Core, Version: 6.9.0.300
+ID: HomeStudent2021Retail - zh-cn, Name: Microsoft Office 家庭和学生版 2021 - zh-cn, Version: 16.0.16924.20150        
+ID: HwOsd, Name: HW OSD, Version: 13.0.6.400
+ID: IE40, Name: N/A, Version: N/A
