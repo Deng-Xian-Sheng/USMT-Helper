@@ -1,6 +1,5 @@
 # 让用户输入被迁移用户在Users/xxx的用户名
-# 让用户输入脱机系统的盘符
-# 根据sid替换reg.xml中的路径
+# 处理在USMT中使用NTUSER.DAT的问题,让reg.xml中的路径正确
 # 根据用户名替换file.xml的路径
 # 生成file1.xml，里面指定迁移Program Files和Program Files (x86)
 # 指定排除
