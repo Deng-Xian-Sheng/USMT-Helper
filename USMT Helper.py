@@ -1,12 +1,32 @@
+import os
+import subprocess
+def load_reg(key_name:str,file_path:str):
+    try:
+        subprocess.run(['reg', 'load', key_name, file_path], check=True)
+    except Exception as e:
+        print(e)
+
+def unload_reg(key_name:str):
+    try:
+        subprocess.run(['reg', 'unload', key_name], check=True)
+    except Exception as e:
+        print(e)
+
+# 必须在转移的目标系统上运行本程序
+print("请在转移的目标系统上运行本程序")
+
 # 让用户输入被迁移用户在Users/xxx的用户名
-# 处理在USMT中使用NTUSER.DAT的问题,让reg.xml中的路径正确
 username = input("请输入被迁移用户在Users/xxx的用户名：")
 
-# 让用户输入脱机系统的盘符
-drive = input("请输入脱机系统的盘符：")
+# 让用户输入脱机系统根目录
+os_root = input("请输入脱机系统根目录(例如:D:\\)：")
 
-# 根据用户名查找sid
-# 根据sid替换reg.xml中的路径
+# 处理在USMT中使用NTUSER.DAT的问题,让reg.xml中的路径正确
+# 首先先挂载NTUSER.DAT
+hku_tmp_user = r"HKU\TempUser" + username
+load_reg(hku_tmp_user,os.path.join(os_root,"Users",username,"NTUSER.DAT"))
+
+# 替换 替换路径 为 hku_tmp_user
 
 # 根据用户名替换file.xml的路径
 # 生成file1.xml，里面指定迁移Program Files和Program Files (x86)

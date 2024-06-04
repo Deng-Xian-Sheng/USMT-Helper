@@ -7,16 +7,16 @@
                 <include>
                     <objectSet>
                         <!-- 迁移特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\替换用户sid\SOFTWARE\*
+                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\*
                             HKEY_CURRENT_USER\SOFTWARE\*</pattern>
                     </objectSet>
                 </include>
                 <exclude>
                     <objectSet>
                         <!-- 排除特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\替换用户sid\SOFTWARE\Microsoft
+                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\Microsoft
                             HKEY_CURRENT_USER\SOFTWARE\Microsoft</pattern>
-                        <pattern type="Registry">HKEY_USERS\替换用户sid\SOFTWARE\Classes
+                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\Classes
                             HKEY_CURRENT_USER\SOFTWARE\Classes</pattern>
                     </objectSet>
                 </exclude>
