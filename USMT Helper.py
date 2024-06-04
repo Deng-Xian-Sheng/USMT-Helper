@@ -1,4 +1,5 @@
 # 让用户输入被迁移用户在Users/xxx的用户名
+# 处理在USMT中使用NTUSER.DAT的问题,让reg.xml中的路径正确
 username = input("请输入被迁移用户在Users/xxx的用户名：")
 
 # 让用户输入脱机系统的盘符
