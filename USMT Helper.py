@@ -168,7 +168,7 @@ if __name__ == "__main__":
     replace_text_in_file("reg.xml","替换路径",hku_tmp_user)
 
     # 根据用户名替换file.xml的路径
-    replace_text_in_file("file.xml","替换路径",username)
+    replace_text_in_file("file.xml","替换用户名",username)
 
     # 指定排除
     exclude_32 = []
@@ -215,12 +215,16 @@ if __name__ == "__main__":
         os.path.join(os_root,"Program Files/Common Files"),
        os.path.join(os_root,"Program Files (x86)/Common Files")
     ], "common_files_list.txt")
-
+    all_files = read_txt_file_line_by_line("common_files_list.txt")
+    
     print("请修改common_files_list.txt,保留你想迁移的,删除不想迁移的,然后按回车键继续...")
     input()
 
     # 然后取反，将需要排除的添加到file1.xml
-    exclude_files = read_txt_file_line_by_line("common_files_list.txt")
+    baoliu_files = read_txt_file_line_by_line("common_files_list.txt")
+
+    # 取反
+    exclude_files = list(set(all_files) - set(baoliu_files))
     exclude_files2 = exclude_files.copy()
     for i in range(len(exclude_files)):
         exclude_files[i] = "%SystemDrive%\\Program Files\\Common Files" + exclude_files[i]
