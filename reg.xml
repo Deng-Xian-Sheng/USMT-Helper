@@ -9,6 +9,10 @@
                         <!-- 迁移特定的注册表项 -->
                         <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\*
                             HKEY_CURRENT_USER\SOFTWARE\*</pattern>
+                        <pattern
+                            type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\*
+                            HKEY_LOCAL_MACHINE\SOFTWARE\*
+                        </pattern>
                     </objectSet>
                 </include>
                 <exclude>
@@ -18,6 +22,14 @@
                             HKEY_CURRENT_USER\SOFTWARE\Microsoft</pattern>
                         <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\Classes
                             HKEY_CURRENT_USER\SOFTWARE\Classes</pattern>
+                        <pattern type="Registry">
+                            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
+                            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
+                        </pattern>
+                        <pattern type="Registry">
+                            HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+                            HKEY_LOCAL_MACHINE\SOFTWARE\Classes
+                        </pattern>
                     </objectSet>
                 </exclude>
             </rules>
