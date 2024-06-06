@@ -7,7 +7,7 @@
                 <include>
                     <objectSet>
                         <!-- 迁移特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\*
+                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\*
                             HKEY_CURRENT_USER\SOFTWARE\*</pattern>
                         <pattern
                             type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\*
@@ -18,9 +18,9 @@
                 <exclude>
                     <objectSet>
                         <!-- 排除特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\Microsoft
+                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\Microsoft
                             HKEY_CURRENT_USER\SOFTWARE\Microsoft</pattern>
-                        <pattern type="Registry">HKEY_USERS\替换路径\SOFTWARE\Classes
+                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\Classes
                             HKEY_CURRENT_USER\SOFTWARE\Classes</pattern>
                         <pattern type="Registry">
                             HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft

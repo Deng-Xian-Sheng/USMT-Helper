@@ -102,6 +102,9 @@ def generate_xml(file_path,in_exclude:list[str]):
 
     # 打印生成的 XML 字符串
     print(xml_string)
+    print("\n")
+    print("XML生成完成请检阅")
+    print("生成的XML已保存到" + file_path)
 
     # 将生成的 XML 保存到文件
     with open(file_path, 'w', encoding='utf-8') as f:
@@ -227,9 +230,9 @@ if __name__ == "__main__":
     exclude_files = list(set(all_files) - set(baoliu_files))
     exclude_files2 = exclude_files.copy()
     for i in range(len(exclude_files)):
-        exclude_files[i] = "%SystemDrive%\\Program Files\\Common Files" + exclude_files[i]
+        exclude_files[i] = "%SystemDrive%\\Program Files\\Common Files\\" + exclude_files[i]
     for i in range(len(exclude_files2)):
-        exclude_files2[i] = "%SystemDrive%\\Program Files (x86)\\Common Files" + exclude_files2[i]
+        exclude_files2[i] = "%SystemDrive%\\Program Files (x86)\\Common Files\\" + exclude_files2[i]
    
     # 生成file1.xml，里面指定迁移Program Files和Program Files (x86)
     generate_xml("file1.xml",exclude_32 + exclude_64 + exclude_files + exclude_files2)
