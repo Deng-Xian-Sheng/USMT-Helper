@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<migration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="USMTXML\MigXML.xsd"
+    urlid="http://www.microsoft.com/migration/1.0/migxmlext/testfilemig">
+    <component type="Application" context="System">
+        <displayName>File Migration Test</displayName>
+        <role role="Data">
+            <rules context="System">
+                <include>
+                    <objectSet>
+                        <pattern type="File">%ProgramFiles%\USMTTestFolder\* [USMTTestFile.txt]</pattern>
+                        <pattern type="File">%ProgramFiles%\USMTDIRTestFolder\* [*]</pattern>
+                    </objectSet>
+                </include>
+            </rules>
+        </role>
+    </component>
+    <component type="System">
+        <displayName>Registry Migration Test</displayName>
+        <role role="Settings">
+            <rules context="UserAndSystem">
+                <include>
+                    <objectSet>
+                        <pattern type="Registry">HKCU\Software\USMTTESTKEY\* [MyKey]</pattern>
+                        <pattern type="Registry">HKLM\Software\USMTTESTKEY\* [*]</pattern>
+                    </objectSet>
+                </include>
+            </rules>
+        </role>
+    </component>
+</migration>

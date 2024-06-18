@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/unconditionalExcludeFile">
+    <component type="Documents" context="System">
+        <displayName>File Migration</displayName>
+        <role role="Data">
+            <rules context="System">
+                <unconditionalExclude>
+                    <objectSet>
+                        <script>MigXmlHelper.GenerateDrivePatterns("* [Win11SystemNotDeleteOrEdit.vhdx]", "Fixed")</script>
+                        <script>MigXmlHelper.GenerateDrivePatterns("* [Win11SystemNotDeleteOrEdit1.vhdx]", "Fixed")</script>
+                    </objectSet>
+                </unconditionalExclude>
+            </rules>
+        </role>
+    </component>
+</migration>

@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/customregistry">
-    <component type="System">
-        <displayName>Registry Migration</displayName>
+<migration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="USMTXML\MigXML.xsd"
+    urlid="http://www.microsoft.com/migration/1.0/migxmlext/reg">
+    <component type="User">
+        <displayName>Registry Migration User</displayName>
         <role role="Settings">
-            <rules context="UserAndSystem">
+            <rules context="User">
                 <include>
                     <objectSet>
-                        <!-- 迁移特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\*
-                            HKEY_CURRENT_USER\SOFTWARE\*</pattern>
-                        <pattern
-                            type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\*
-                            HKEY_LOCAL_MACHINE\SOFTWARE\*
-                        </pattern>
+                        <pattern type="Registry">HKEY_CURRENT_USER\SOFTWARE\* [*]</pattern>
+                        <pattern type="Registry">HKEY_CURRENT_USER\Environment\* [*]</pattern>
                     </objectSet>
                 </include>
                 <exclude>
                     <objectSet>
                         <!-- 排除特定的注册表项 -->
-                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\Microsoft
-                            HKEY_CURRENT_USER\SOFTWARE\Microsoft</pattern>
-                        <pattern type="Registry">HKEY_USERS\HKU\TempUserx1761\SOFTWARE\Classes
-                            HKEY_CURRENT_USER\SOFTWARE\Classes</pattern>
-                        <pattern type="Registry">
-                            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
-                            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
-                        </pattern>
-                        <pattern type="Registry">
-                            HKEY_LOCAL_MACHINE\SOFTWARE\Classes
-                            HKEY_LOCAL_MACHINE\SOFTWARE\Classes
-                        </pattern>
+                        <pattern type="Registry">HKEY_CURRENT_USER\SOFTWARE\Microsoft\* [*]</pattern>
+                        <pattern type="Registry">HKEY_CURRENT_USER\SOFTWARE\Classes\* [*]</pattern>
+                    </objectSet>
+                </exclude>
+            </rules>
+        </role>
+    </component>
+    <component type="System">
+        <displayName>Registry Migration System</displayName>
+        <role role="Settings">
+            <rules context="System">
+                <include>
+                    <objectSet>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\* [*]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\* [*]</pattern>
+                    </objectSet>
+                </include>
+                <exclude>
+                    <objectSet>
+                        <!-- 排除特定的注册表项 -->
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\* [*]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\* [*]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [NUMBER_OF_PROCESSORS]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_ARCHITECTURE]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_LEVEL]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_REVISION]</pattern>
                     </objectSet>
                 </exclude>
             </rules>

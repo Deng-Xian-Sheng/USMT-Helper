@@ -1,2 +1,6 @@
-microsoft shared
-Microsoft Shared
+Adobe
+VMware
+Designer
+Steam
+Tencent
+Thunder Network

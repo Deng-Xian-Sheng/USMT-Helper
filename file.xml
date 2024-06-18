@@ -1,52 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/customfiles">
-    <component type="Documents" context="User">
+<migration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="USMTXML\MigXML.xsd"
+    urlid="http://www.microsoft.com/migration/1.0/migxmlext/file">
+    <component type="Application" context="User">
         <displayName>File Migration</displayName>
         <role role="Data">
             <rules context="User">
                 <include>
                     <objectSet>
-                        <!-- 迁移特定的文件路径和文件类型 -->
-                        <pattern type="File">%SystemDrive%\Users\x1761\Local\Appdata\*
-                            %SystemDrive%\Users\%USERNAME%\Local\Appdata\*</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\Roaming\Appdata\*
-                            %SystemDrive%\Users\%USERNAME%\Roaming\Appdata\*</pattern>
+                        <pattern type="File">%USERPROFILE%\Appdata\Local\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\Appdata\LocalLow\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\Appdata\Roaming\* [*]</pattern>
+                        <pattern type="File">%CSIDL_COMMON_APPDATA%\* [*]</pattern>
+                        <pattern type="File">%CSIDL_DESKTOP%\* [*]</pattern>
+                        <pattern type="File">%CSIDL_DESKTOPDIRECTORY%\* [*]</pattern>
                     </objectSet>
                 </include>
                 <exclude>
                     <objectSet>
                         <!-- 排除特定的文件路径和文件类型 -->
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Temp
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Temp</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Packages
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Packages</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\TileDataLayer
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\TileDataLayer</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Microsoft\Temp
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\Temp</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Microsoft\Credentials
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\Credentials</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Microsoft\Windows
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\Windows</pattern>
-                        <pattern type="File">
-                            %SystemDrive%\Users\x1761\AppData\Local\Microsoft\Windows\InputPersonalization
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\Windows\InputPersonalization</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Microsoft\Windows\Side
-                            bars
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\Windows\Side bars</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Local\Microsoft\WindowsApps
-                            %SystemDrive%\Users\%USERNAME%\AppData\Local\Microsoft\WindowsApps</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Roaming\Microsoft\Credentials
-                            %SystemDrive%\Users\%USERNAME%\AppData\Roaming\Microsoft\Credentials</pattern>
-                        <pattern type="File">
-                            %SystemDrive%\Users\x1761\AppData\Roaming\Microsoft\SystemCertificates
-                            %SystemDrive%\Users\%USERNAME%\AppData\Roaming\Microsoft\SystemCertificates</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Roaming\Microsoft\Crypto
-                            %SystemDrive%\Users\%USERNAME%\AppData\Roaming\Microsoft\Crypto</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Roaming\Microsoft\Vault
-                            %SystemDrive%\Users\%USERNAME%\AppData\Roaming\Microsoft\Vault</pattern>
-                        <pattern type="File">%SystemDrive%\Users\x1761\AppData\Roaming\Microsoft\Windows
-                            %SystemDrive%\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Temp\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Packages\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\TileDataLayer\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\Temp\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\Credentials\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\Windows\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\Windows\InputPersonalization\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\Windows\Side bars\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Temp\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Packages\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\TileDataLayer\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\Temp\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\Credentials\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\Windows\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\Windows\InputPersonalization\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\Windows\Side bars\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\LocalLow\Microsoft\WindowsApps\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Roaming\Microsoft\Credentials\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Roaming\Microsoft\SystemCertificates\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Roaming\Microsoft\Crypto\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Roaming\Microsoft\Vault\* [*]</pattern>
+                        <pattern type="File">%USERPROFILE%\AppData\Roaming\Microsoft\Windows\* [*]</pattern>
+                        <pattern type="File">%CSIDL_COMMON_APPDATA%\Microsoft\* [*]</pattern>
                     </objectSet>
                 </exclude>
             </rules>

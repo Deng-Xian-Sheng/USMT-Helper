@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/customfiles">
+    <component type="Documents" context="User">
+        <displayName>File Migration</displayName>
+        <role role="Data">
+            <rules context="User">
+                <include>
+                    <objectSet>
+                        <!-- 迁移特定的文件路径和文件类型 -->
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\Local\Appdata\*
+                            %PROFILESFOLDER%\%USERNAME%\Local\Appdata\*</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\Roaming\Appdata\*
+                            %PROFILESFOLDER%\%USERNAME%\Roaming\Appdata\*</pattern>
+                    </objectSet>
+                </include>
+                <exclude>
+                    <objectSet>
+                        <!-- 排除特定的文件路径和文件类型 -->
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Temp
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Temp</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Packages
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Packages</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\TileDataLayer
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\TileDataLayer</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\Temp
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\Temp</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\Credentials
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\Credentials</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\Windows
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\Windows</pattern>
+                        <pattern type="File">
+                            %PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\Windows\InputPersonalization
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\Windows\InputPersonalization</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\Windows\Side
+                            bars
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\Windows\Side bars</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Local\Microsoft\WindowsApps
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Local\Microsoft\WindowsApps</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Roaming\Microsoft\Credentials
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Roaming\Microsoft\Credentials</pattern>
+                        <pattern type="File">
+                            %PROFILESFOLDER%\替换用户名\AppData\Roaming\Microsoft\SystemCertificates
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Roaming\Microsoft\SystemCertificates</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Roaming\Microsoft\Crypto
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Roaming\Microsoft\Crypto</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Roaming\Microsoft\Vault
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Roaming\Microsoft\Vault</pattern>
+                        <pattern type="File">%PROFILESFOLDER%\替换用户名\AppData\Roaming\Microsoft\Windows
+                            %PROFILESFOLDER%\%USERNAME%\AppData\Roaming\Microsoft\Windows</pattern>
+                    </objectSet>
+                </exclude>
+            </rules>
+        </role>
+    </component>
+</migration>

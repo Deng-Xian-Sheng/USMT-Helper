@@ -1,42 +1,52 @@
-<?xml version="1.0" ?>
-<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/customfiles">
-    <component type="Documents" context="User">
+<?xml version='1.0' encoding='utf-8'?>
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/file1">
+    <component type="Documents" context="System">
         <displayName>File Migration</displayName>
         <role role="Data">
-            <rules context="User">
+            <rules context="System">
                 <include>
                     <objectSet>
-                        <pattern type="File">%SystemDrive%\Program Files\* %SystemDrive%\Program Files\*</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\* %SystemDrive%\Program Files (x86)\*</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\* [*]</pattern>
                     </objectSet>
                 </include>
                 <exclude>
                     <objectSet>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows NT %SystemDrive%\Program Files (x86)\Windows NT</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Internet Explorer %SystemDrive%\Program Files (x86)\Internet Explorer</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Microsoft.NET %SystemDrive%\Program Files (x86)\Microsoft.NET</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Defender %SystemDrive%\Program Files (x86)\Windows Defender</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Mail %SystemDrive%\Program Files (x86)\Windows Mail</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Media Player %SystemDrive%\Program Files (x86)\Windows Media Player</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Photo Viewer %SystemDrive%\Program Files (x86)\Windows Photo Viewer</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Portable Devices %SystemDrive%\Program Files (x86)\Windows Portable Devices</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Security %SystemDrive%\Program Files (x86)\Windows Security</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Windows Sidebar %SystemDrive%\Program Files (x86)\Windows Sidebar</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\WindowsPowerShell %SystemDrive%\Program Files (x86)\WindowsPowerShell</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows NT %SystemDrive%\Program Files\Windows NT</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Internet Explorer %SystemDrive%\Program Files\Internet Explorer</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Microsoft.NET %SystemDrive%\Program Files\Microsoft.NET</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Defender %SystemDrive%\Program Files\Windows Defender</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Mail %SystemDrive%\Program Files\Windows Mail</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Media Player %SystemDrive%\Program Files\Windows Media Player</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Photo Viewer %SystemDrive%\Program Files\Windows Photo Viewer</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Portable Devices %SystemDrive%\Program Files\Windows Portable Devices</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Security %SystemDrive%\Program Files\Windows Security</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Windows Sidebar %SystemDrive%\Program Files\Windows Sidebar</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\WindowsPowerShell %SystemDrive%\Program Files\WindowsPowerShell</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\WindowsApps %SystemDrive%\Program Files\WindowsApps</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files\Common FilesSystem %SystemDrive%\Program Files\Common FilesSystem</pattern>
-                        <pattern type="File">%SystemDrive%\Program Files (x86)\Common FilesSystem %SystemDrive%\Program Files (x86)\Common FilesSystem</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows NT\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Internet Explorer\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Microsoft.NET\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Defender\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Mail\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Media Player\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Photo Viewer\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Portable Devices\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Security\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\Windows Sidebar\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILESX86%\WindowsPowerShell\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows NT\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Internet Explorer\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Microsoft.NET\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Defender\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Mail\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Media Player\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Photo Viewer\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Portable Devices\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Security\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\Windows Sidebar\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\WindowsPowerShell\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES%\WindowsApps\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\Services\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\System\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\Microsoft Shared\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\DESIGNER\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\Microsoft\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMON%\microsoft shared\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\Services\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\System\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\Microsoft Shared\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\DESIGNER\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\Microsoft\* [*]</pattern>
+                        <pattern type="File">%CSIDL_PROGRAM_FILES_COMMONX86%\microsoft shared\* [*]</pattern>
                     </objectSet>
                 </exclude>
             </rules>
