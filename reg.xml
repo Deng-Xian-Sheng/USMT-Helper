@@ -37,10 +37,10 @@
                         <!-- 排除特定的注册表项 -->
                         <pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\* [*]</pattern>
                         <pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\* [*]</pattern>
-                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [NUMBER_OF_PROCESSORS]</pattern>
-                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_ARCHITECTURE]</pattern>
-                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_LEVEL]</pattern>
-                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment [PROCESSOR_REVISION]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\ [NUMBER_OF_PROCESSORS]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\ [PROCESSOR_ARCHITECTURE]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\ [PROCESSOR_LEVEL]</pattern>
+                        <pattern type="Registry">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\ [PROCESSOR_REVISION]</pattern>
                     </objectSet>
                 </exclude>
             </rules>

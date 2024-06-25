@@ -1,0 +1,34 @@
+# 迁移注册表
+# 先挂载相应文件，然后填写此配置文件
+# 挂载相应文件的参考：
+# 注册表配置单元                 支持文件
+# HKEY_CURRENT_CONFIG           System、System.alt、System.log、System.sav
+# HKEY_CURRENT_USER             Ntuser.dat、Ntuser.dat.log
+# HKEY_LOCAL_MACHINE\SAM        Sam、Sam.log、Sam.sav
+# HKEY_LOCAL_MACHINE\Security	Security、Security.log、Security.sav
+# HKEY_LOCAL_MACHINE\Software	Software、Software.log、Software.sav
+# HKEY_LOCAL_MACHINE\System     System、System.alt、System.log、System.sav
+# HKEY_USERS\.DEFAULT           Default、Default.log、Default.sav
+
+[[reg]]
+
+# 迁移文件
+# 不支持Win环境变量
+# 不支持通配符，它会迁移 “提供的路径” 里面的任何东西，排除项除外
+# “path/” 与 “path” 的区别是，一个会迁移 “path” 文件夹里面的任何东西但不包括 “path” 文件夹本身，一个会迁移 “path” 文件夹
+# overlap 覆盖目标文件
+# no 排除项，以源路径为基准
+# 排除项中的项目应确保存在于源路径中，否则它将不起作用；换句话说，排除项不会应用于其他 [[file]]
+# 排除项语法支持：
+# no=[
+# '*.pyc',
+# 'tmp*'
+# ]
+# 这将会迁移除 .pyc 文件和以 tmp 打头的文件或目录以外的所有条目。
+[[file]]
+path_src='C:\Windows\System32\config'
+path_dst='dst'
+overlap=true
+no=[
+    'B*'
+]

@@ -1,0 +1,454 @@
+错误代码: 17
+错误信息: 当文件已存在时，无法创建该文件。
+
+错误代码: 17
+错误信息: 当文件已存在时，无法创建该文件。
+
+源路径: C:\Windows\System32\config\BBI
+目标路径: dst\BBI
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG1
+目标路径: dst\BBI.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG2
+目标路径: dst\BBI.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT
+目标路径: dst\DEFAULT
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG1
+目标路径: dst\DEFAULT.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG2
+目标路径: dst\DEFAULT.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM
+目标路径: dst\SAM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG1
+目标路径: dst\SAM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG2
+目标路径: dst\SAM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY
+目标路径: dst\SECURITY
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG1
+目标路径: dst\SECURITY.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG2
+目标路径: dst\SECURITY.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE
+目标路径: dst\SOFTWARE
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG1
+目标路径: dst\SOFTWARE.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG2
+目标路径: dst\SOFTWARE.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM
+目标路径: dst\SYSTEM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG1
+目标路径: dst\SYSTEM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG2
+目标路径: dst\SYSTEM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+错误信息: [Errno 13] Permission denied: 'dst\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\CloudAPCache\\MicrosoftAccount\\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\\Cache\\CacheData'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+错误信息: [WinError 5] 拒绝访问。: 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.IE5'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI
+目标路径: dst\BBI
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG1
+目标路径: dst\BBI.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG2
+目标路径: dst\BBI.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT
+目标路径: dst\DEFAULT
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG1
+目标路径: dst\DEFAULT.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG2
+目标路径: dst\DEFAULT.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM
+目标路径: dst\SAM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG1
+目标路径: dst\SAM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG2
+目标路径: dst\SAM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY
+目标路径: dst\SECURITY
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG1
+目标路径: dst\SECURITY.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG2
+目标路径: dst\SECURITY.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE
+目标路径: dst\SOFTWARE
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG1
+目标路径: dst\SOFTWARE.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG2
+目标路径: dst\SOFTWARE.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM
+目标路径: dst\SYSTEM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG1
+目标路径: dst\SYSTEM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG2
+目标路径: dst\SYSTEM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+错误信息: [Errno 13] Permission denied: 'dst\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\CloudAPCache\\MicrosoftAccount\\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\\Cache\\CacheData'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+错误信息: [WinError 5] 拒绝访问。: 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.IE5'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI
+目标路径: dst\BBI
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG1
+目标路径: dst\BBI.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\BBI.LOG2
+目标路径: dst\BBI.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT
+目标路径: dst\DEFAULT
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG1
+目标路径: dst\DEFAULT.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG2
+目标路径: dst\DEFAULT.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM
+目标路径: dst\SAM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG1
+目标路径: dst\SAM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG2
+目标路径: dst\SAM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY
+目标路径: dst\SECURITY
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG1
+目标路径: dst\SECURITY.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG2
+目标路径: dst\SECURITY.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE
+目标路径: dst\SOFTWARE
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG1
+目标路径: dst\SOFTWARE.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG2
+目标路径: dst\SOFTWARE.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM
+目标路径: dst\SYSTEM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG1
+目标路径: dst\SYSTEM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG2
+目标路径: dst\SYSTEM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\CloudAPCache\MicrosoftAccount\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\Cache\CacheData
+错误信息: [Errno 13] Permission denied: 'dst\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\CloudAPCache\\MicrosoftAccount\\bea3b5b1fd5409ca342f5b0fd6f5b0d9db9e3df79485a26c2d56860d3d6fdb17\\Cache\\CacheData'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+错误信息: [WinError 5] 拒绝访问。: 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.IE5'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT
+目标路径: dst\DEFAULT
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG1
+目标路径: dst\DEFAULT.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\DEFAULT.LOG2
+目标路径: dst\DEFAULT.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM
+目标路径: dst\SAM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG1
+目标路径: dst\SAM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SAM.LOG2
+目标路径: dst\SAM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY
+目标路径: dst\SECURITY
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG1
+目标路径: dst\SECURITY.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SECURITY.LOG2
+目标路径: dst\SECURITY.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE
+目标路径: dst\SOFTWARE
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG1
+目标路径: dst\SOFTWARE.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SOFTWARE.LOG2
+目标路径: dst\SOFTWARE.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM
+目标路径: dst\SYSTEM
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG1
+目标路径: dst\SYSTEM.LOG1
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\SYSTEM.LOG2
+目标路径: dst\SYSTEM.LOG2
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSS.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+目标路径: dst\systemprofile\AppData\Local\DataSharing\Storage\DSTokenDB2.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\INetCache\Content.IE5
+错误信息: [WinError 5] 拒绝访问。: 'C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.IE5'
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
+源路径: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+目标路径: dst\systemprofile\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+错误信息: [WinError 32] 另一个程序正在使用此文件，进程无法访问。
+
