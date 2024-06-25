@@ -1,5 +1,6 @@
 import shutil
 import toml
+import time
 
 def log_str(log_data: tuple)->str:
     return f"源路径: {log_data[0]}\n目标路径: {log_data[1]}\n错误信息: {log_data[2]}\n\n"
@@ -29,7 +30,7 @@ def append_log_to_file(log_message, log_file_path):
 with open('migrate_config.toml', 'r', encoding='utf-8') as f:
     migrate_config = toml.load(f)
 
-# 打印存储的数据
+
 for v in migrate_config['file']:
     if v['path_src'] == "":
         print("migrate_config.toml 配置文件错误, path_src 不能为空")
@@ -51,4 +52,9 @@ for v in migrate_config['file']:
                 for vv in v:
                     append_log_to_file(log_str(vv),"log.txt")
         
-        
+# 先把原路径复制到临时路径
+tmp_num = ''
+tmp_reg = f"HKEY_CURRENT_USER/{int(time.time())}_{tmp_num}"
+# 然后使用reg delete删除不需要的内容,记得替换部分路径
+# 然后将临时路径的内容复制到目标路径
+# 然后删除临时路径
