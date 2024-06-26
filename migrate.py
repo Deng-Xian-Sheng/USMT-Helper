@@ -1,4 +1,5 @@
 import shutil
+import winreg
 import toml
 import time
 
@@ -51,10 +52,6 @@ for v in migrate_config['file']:
             for v in e.args:
                 for vv in v:
                     append_log_to_file(log_str(vv),"log.txt")
-        
-# 先把原路径复制到临时路径
-tmp_num = ''
-tmp_reg = f"HKEY_CURRENT_USER/{int(time.time())}_{tmp_num}"
-# 然后使用reg delete删除不需要的内容,记得替换部分路径
-# 然后将临时路径的内容复制到目标路径
-# 然后删除临时路径
+
+winreg.REG_WHOLE_HIVE_VOLATILE
+winreg.CreateKey(, sub_key)
