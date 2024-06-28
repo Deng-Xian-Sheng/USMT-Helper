@@ -1,7 +1,7 @@
-# import winreg
-import time
+import os
 import shutil
 import fake_winreg as winreg
+# import winreg
 import toml
 import fnmatch
 
@@ -32,31 +32,7 @@ def append_log_to_file(log_message, log_file_path):
 # 读取TOML配置文件
 with open('migrate_config.toml', 'r', encoding='utf-8') as f:
     migrate_config = toml.load(f)
-
-
-for v in migrate_config['file']:
-    if v['path_src'] == "":
-        print("migrate_config.toml 配置文件错误, path_src 不能为空")
-        exit(1)
-    if v['path_dst'] == "":
-        print("migrate_config.toml 配置文件错误, path_dst 不能为空")
-        exit(1)
-    for vv in v['no']:
-        if vv == "":
-            print("migrate_config.toml 配置文件错误, no 不能为空")
-            exit(1)
-    try:
-        shutil.copytree(v['path_src'],v['path_dst'],symlinks=True,dirs_exist_ok=v['overlap'],ignore=shutil.ignore_patterns(*v['no']))
-    except Exception as e:
-        if isinstance(e.args,tuple):
-            append_log_to_file(f"错误代码: {e.args[0]}\n错误信息: {e.args[1]}\n\n","log.txt")
-        if isinstance(e.args[0], tuple):
-            append_log_to_file(f"错误代码: {e.args[0]}\n错误信息: {e.args[1]}\n\n","log.txt")
-        if isinstance(e.args[0], list):
-            for v in e.args:
-                for vv in v:
-                    append_log_to_file(log_str(vv),"log.txt")
-
+    
 root_key_to_winreg_const = {
     "HKEY_CLASSES_ROOT":winreg.HKEY_CLASSES_ROOT,
     "HKEY_CURRENT_USER":winreg.HKEY_CURRENT_USER,
@@ -67,8 +43,19 @@ root_key_to_winreg_const = {
     "HKEY_DYN_DATA":winreg.HKEY_DYN_DATA,
 }
 
-def is_excluded(path, exclusions):
-    return any(fnmatch.fnmatch(path.lower(), exc.lower()) for exc in exclusions)
+def is_excluded(path, key, exclusions):
+    for exclusion in exclusions:
+        if exclusion['type'] == 'path':
+            if path.lower().startswith(exclusion['value'].lower()):
+                return True
+        elif exclusion['type'] == 'key':
+            if key.lower() == exclusion['value'].lower():
+                return True
+        elif exclusion['type'] == 'glob':
+            if fnmatch.fnmatch(path.lower(), exclusion['value'].lower()) or \
+               fnmatch.fnmatch(key.lower(), exclusion['value'].lower()):
+                return True
+    return False
 
 # 如果不在Windows系统上，定义WindowsError
 if not hasattr(__builtins__, 'WindowsError'):
@@ -100,14 +87,14 @@ def copy_registry_key(src_key, dst_key, src_subkey, dst_parent, dst_name):
                 winreg.SetValueEx(dst_handle, name, 0, type, data)
                 print(f"  复制值: {name} = {data}")
                 index += 1
-            except OSError:
+            except WindowsError:
                 break
         
         winreg.CloseKey(src_handle)
         winreg.CloseKey(dst_handle)
         
         print(f"完成复制键: {src_subkey} -> {dst_subkey}")
-    except OSError as e:
+    except WindowsError as e:
         print(f"复制 {src_subkey} 到 {dst_subkey} 时出错: {e}")
 
 def copy_registry_path(src_key, dst_key, src_path, dst_path, exclusions):
@@ -123,13 +110,13 @@ def copy_registry_path(src_key, dst_key, src_path, dst_path, exclusions):
             try:
                 name, data, type = winreg.EnumValue(src_handle, index)
                 full_path = f"{src_path}\\{name}"
-                if not is_excluded(full_path, exclusions):
+                if not is_excluded(full_path, name, exclusions):
                     winreg.SetValueEx(dst_handle, name, 0, type, data)
                     print(f"  复制值: {name} = {data}")
                 else:
                     print(f"  排除值: {name}")
                 index += 1
-            except OSError:
+            except WindowsError:
                 break
         
         # 复制子键
@@ -138,7 +125,7 @@ def copy_registry_path(src_key, dst_key, src_path, dst_path, exclusions):
             try:
                 subkey_name = winreg.EnumKey(src_handle, index)
                 full_path = f"{src_path}\\{subkey_name}"
-                if not is_excluded(full_path, exclusions):
+                if not is_excluded(full_path, subkey_name, exclusions):
                     print(f"  进入子键: {subkey_name}")
                     copy_registry_path(src_key, dst_key, 
                                        full_path, 
@@ -147,45 +134,64 @@ def copy_registry_path(src_key, dst_key, src_path, dst_path, exclusions):
                 else:
                     print(f"  排除子键: {subkey_name}")
                 index += 1
-            except OSError:
+            except WindowsError:
                 break
         
         winreg.CloseKey(src_handle)
         winreg.CloseKey(dst_handle)
         
         print(f"完成复制路径: {src_path} -> {dst_path}")
-    except OSError as e:
+    except WindowsError as e:
         print(f"复制路径 {src_path} 到 {dst_path} 时出错: {e}")
 
-def copy_registry(src, dst, exclusions):
+def copy_registry(src, dst, mode, exclusions):
     src_key, src_path = parse_registry_path(src)
     dst_key, dst_path = parse_registry_path(dst)
     
     print(f"开始复制注册表:")
     print(f"源: {src}")
     print(f"目标: {dst}")
+    print(f"模式: {mode}")
     print(f"排除项: {exclusions}\n")
     
-    if '\\' not in src_path.strip('\\') and '\\' not in dst_path.strip('\\'):
-        # 单个键到单个键的复制
-        copy_registry_key(src_key, dst_key, src_path, "", dst_path)
-    elif '\\' not in src_path.strip('\\'):
-        # 单个键到路径的复制
-        dst_parent, dst_name = dst_path.rsplit('\\', 1)
+    if mode == "key":
+        dst_parent, dst_name = os.path.split(dst_path)
         copy_registry_key(src_key, dst_key, src_path, dst_parent, dst_name)
-    else:
-        # 路径到路径的复制
+    elif mode == "path":
         copy_registry_path(src_key, dst_key, src_path, dst_path, exclusions)
+    else:
+        raise ValueError(f"不支持的模式: {mode}")
     
     print("\n注册表复制完成")
 
-# 使用示例
-src = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion"
-dst = r"HKEY_CURRENT_USER\Software\MyApp\WindowsSettings"
-exclusions = [
-    r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run",
-    r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce",
-    "*.tmp"
-]
 
-copy_registry(src, dst, exclusions)
+for v in migrate_config['file']:
+    if v['path_src'] == "":
+        print("migrate_config.toml 配置文件错误, path_src 不能为空")
+        exit(1)
+    if v['path_dst'] == "":
+        print("migrate_config.toml 配置文件错误, path_dst 不能为空")
+        exit(1)
+    for vv in v['no']:
+        if vv == "":
+            print("migrate_config.toml 配置文件错误, no 不能为空")
+            exit(1)
+    try:
+        shutil.copytree(v['path_src'],v['path_dst'],symlinks=True,dirs_exist_ok=v['overlap'],ignore=shutil.ignore_patterns(*v['no']))
+    except Exception as e:
+        if isinstance(e.args,tuple):
+            append_log_to_file(f"错误代码: {e.args[0]}\n错误信息: {e.args[1]}\n\n","log.txt")
+        if isinstance(e.args[0], tuple):
+            append_log_to_file(f"错误代码: {e.args[0]}\n错误信息: {e.args[1]}\n\n","log.txt")
+        if isinstance(e.args[0], list):
+            for v in e.args:
+                for vv in v:
+                    append_log_to_file(log_str(vv),"log.txt")
+
+for reg_config in migrate_config.get('reg', []):
+        src = reg_config['src']
+        dst = reg_config['dst']
+        mode = reg_config.get('mode', 'path')
+        exclusions = reg_config.get('exclusions', [])
+        
+        copy_registry(src, dst, mode, exclusions)
