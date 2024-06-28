@@ -53,5 +53,15 @@ for v in migrate_config['file']:
                 for vv in v:
                     append_log_to_file(log_str(vv),"log.txt")
 
-winreg.REG_WHOLE_HIVE_VOLATILE
+root_key_to_winreg_const = {
+    "HKEY_CLASSES_ROOT":winreg.HKEY_CLASSES_ROOT,
+    "HKEY_CURRENT_USER":winreg.HKEY_CURRENT_USER,
+    "HKEY_LOCAL_MACHINE":winreg.HKEY_LOCAL_MACHINE,
+    "HKEY_USERS":winreg.HKEY_USERS,
+    "HKEY_PERFORMANCE_DATA":winreg.HKEY_PERFORMANCE_DATA,
+    "HKEY_CURRENT_CONFIG":winreg.HKEY_CURRENT_CONFIG,
+    "HKEY_DYN_DATA":winreg.HKEY_DYN_DATA,
+}
+
+if 
 winreg.CreateKey(, sub_key)
