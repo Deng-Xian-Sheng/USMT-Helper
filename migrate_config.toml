@@ -11,20 +11,6 @@
 # HKEY_USERS\.DEFAULT           Default、Default.log、Default.sav
 
 [[reg]]
-src = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ProgramFilesDir"
-dst = "HKEY_CURRENT_USER\\Software\\MyApp\\WindowsSettings\\CustomProgramFiles"
-mode = "key"
-
-[[reg]]
-src = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion"
-dst = "HKEY_CURRENT_USER\\Software\\MyApp\\WindowsSettings"
-mode = "path"
-exclusions = [
-    { type = "path", value = "Run" },
-    { type = "path", value = "RunOnce" },
-    { type = "key", value = "ProgramFilesDir" },
-    { type = "glob", value = "*.tmp" }
-]
 
 # 迁移文件
 # 不支持Win环境变量
