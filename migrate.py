@@ -51,6 +51,11 @@ for v in migrate_config['file']:
                 for v in e.args:
                     for vv in v:
                         append_log_to_file(log_str(vv),"log.txt")
+        else:
+            if isinstance(e.args[0], list):
+                for v in e.args:
+                    for vv in v:
+                        append_log_to_file(log_str(vv),"log.txt")
 
 
 def get_hkey(path):
