@@ -9,22 +9,26 @@
 # HKEY_LOCAL_MACHINE\Software	Software、Software.log、Software.sav
 # HKEY_LOCAL_MACHINE\System     System、System.alt、System.log、System.sav
 # HKEY_USERS\.DEFAULT           Default、Default.log、Default.sav
-
+# 支持glob​ 风格
 [[reg]]
-src = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ProgramFilesDir"
-dst = "HKEY_CURRENT_USER\\Software\\MyApp\\WindowsSettings\\CustomProgramFiles"
-mode = "key"
-
-[[reg]]
-src = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion"
-dst = "HKEY_CURRENT_USER\\Software\\MyApp\\WindowsSettings"
-mode = "path"
-exclusions = [
-    { type = "path", value = "Run" },
-    { type = "path", value = "RunOnce" },
-    { type = "key", value = "ProgramFilesDir" },
-    { type = "glob", value = "*.tmp" }
-]
+path_key_src = 'HKEY_CURRENT_USER\AAA'
+path_key_dst = 'HKEY_CURRENT_USER\BBB'
+[allow]
+[[path_key_value]]
+# 绝对路径，而不是相对于 path_key_src
+path_key = 'HKEY_CURRENT_USER\AAA'
+# 假设与 path_key 匹配的路径是 A
+# 那么 value 相对于 A 里面的值(注册表值)
+# 如果 A 里面的值与 value 匹配，则产生相应效果(allow|deny)
+value = 'BBB'
+[deny]
+[[path_key_value]]
+# 绝对路径，而不是相对于 path_key_src
+path_key = 'HKEY_CURRENT_USER\AAA'
+# 假设与 path_key 匹配的路径是 A
+# 那么 value 相对于 A 里面的值(注册表值)
+# 如果 A 里面的值与 value 匹配，则产生相应效果(allow|deny)
+value = 'BBB'
 
 # 迁移文件
 # 不支持Win环境变量
